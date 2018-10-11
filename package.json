@@ -1,6 +1,7 @@
 {
   "name": "react-modalora",
   "version": "0.0.0",
+  "private": true,
   "description": "Modal for React 16+",
   "license": "MIT",
   "repository": {
@@ -12,6 +13,7 @@
   },
   "homepage": "https://github.com/totvs-store/react-modalora#readme",
   "devDependencies": {
+    "@babel/cli": "^7.1.2",
     "@babel/core": "^7.1.2",
     "@babel/preset-env": "^7.1.0",
     "@babel/preset-react": "^7.0.0",
@@ -44,7 +46,13 @@
     }
   },
   "scripts": {
+    "build:babel": "babel -d dist -s --ignore *.test.js src",
+    "build:copy-readme": "cp README.md dist",
+    "build:create-dist": "mkdir -p dist",
+    "build:generate-package": "node build/generate-package.js",
+    "build": "$npm_execpath run build:create-dist; $npm_execpath run build:generate-package; $npm_execpath run build:babel; $npm_execpath run build:copy-readme",
     "lint": "eslint src",
-    "test": "jest"
+    "test": "jest",
+    "watch": "$npm_execpath run build:babel -w"
   }
 }
