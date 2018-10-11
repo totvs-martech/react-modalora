@@ -22,6 +22,7 @@
     "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^10.0.1",
     "babel-jest": "^23.6.0",
+    "cross-env": "^5.2.0",
     "eslint": "^5.6.1",
     "eslint-config-standard": "^12.0.0",
     "eslint-config-standard-react": "^7.0.2",
@@ -31,6 +32,7 @@
     "eslint-plugin-promise": "^4.0.1",
     "eslint-plugin-react": "^7.11.1",
     "eslint-plugin-standard": "^4.0.0",
+    "generate-changelog": "^1.7.1",
     "husky": "^1.1.2",
     "jest": "^23.6.0",
     "react-dom": "^16.5.2"
@@ -52,6 +54,10 @@
     "build:generate-package": "node build/generate-package.js",
     "build": "$npm_execpath run build:create-dist; $npm_execpath run build:generate-package; $npm_execpath run build:babel; $npm_execpath run build:copy-readme",
     "lint": "eslint src",
+    "version:major": "cross-env VERSION=major $npm_execpath run version",
+    "version:minor": "cross-env VERSION=minor $npm_execpath run version",
+    "version:patch": "cross-env VERSION=patch $npm_execpath run version",
+    "version": "changelog -M && git add CHANGELOG.md && git commit -m 'docs: updated CHANGELOG.md' && npm version $VERSION && git push origin && git push origin --tags",
     "test": "jest",
     "watch": "$npm_execpath run build:babel -w"
   }
