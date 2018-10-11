@@ -1,0 +1,14 @@
+{
+  "name": "react-modalora",
+  "version": "0.0.0",
+  "description": "Modal for React 16+",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/totvs-store/react-modalora.git"
+  },
+  "bugs": {
+    "url": "https://github.com/totvs-store/react-modalora/issues"
+  },
+  "homepage": "https://github.com/totvs-store/react-modalora#readme"
+}
