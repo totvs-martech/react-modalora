@@ -153,3 +153,8 @@ $RECYCLE.BIN/
 
 
 # End of https://www.gitignore.io/api/node,visualstudiocode,windows,linux,macos
+
+### Project ###
+
+# Build
+dist
