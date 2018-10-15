@@ -5,35 +5,14 @@ import ModalPortal from './ModalPortal'
 import DefaultContentWrapper from './DefaultContentWrapper'
 import DefaultModalContainer from './DefaultModalContainer'
 import DefaultModalComponent from './DefaultModalComponent'
-
-function getModalRootElement (input) {
-  if (input instanceof HTMLElement) {
-    return input
-  }
-
-  if (typeof input === 'string') {
-    let modalRoot = document.body.querySelector(input)
-
-    if (!modalRoot) {
-      modalRoot = document.body.getElementById(input)
-    }
-  }
-
-  return document.body
-}
-
-function defaultOnClose () {
-  document.body.style.overflow = 'initial'
-}
-
-function defaultOnOpen () {
-  document.body.style.overflow = 'hidden'
-}
+import defaultOnClose from './defaultOnClose'
+import defaultOnOpen from './defaultOnOpen'
+import getModalRootElement from './getModalRootElement'
 
 function ModalProvider ({
   children,
   modalRoot,
-  ContentWrapper = DefaultContentWrapper, // eslint-disable-line react/prop-types
+  ContentWrapper = DefaultContentWrapper,
   ModalComponent = DefaultModalComponent,
   ModalContainer = DefaultModalContainer,
   onClose = defaultOnClose,
