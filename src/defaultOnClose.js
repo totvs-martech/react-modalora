@@ -1,5 +1,5 @@
-function defaultOnClose (d = document) {
-  d.body.style.overflow = 'initial'
+function defaultOnClose (bodyStyle = document.body.style) {
+  bodyStyle.overflow = 'initial'
 }
 
 export default defaultOnClose

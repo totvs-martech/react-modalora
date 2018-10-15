@@ -1,5 +1,5 @@
-function defaultOnOpen (d = document) {
-  d.body.style.overflow = 'hidden'
+function defaultOnOpen (bodyStyle = document.body.style) {
+  bodyStyle.overflow = 'hidden'
 }
 
 export default defaultOnOpen
