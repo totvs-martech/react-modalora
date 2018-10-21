@@ -7,12 +7,14 @@ import DefaultModalContainer from './DefaultModalContainer'
 import DefaultModalComponent from './DefaultModalComponent'
 import defaultOnClose from './defaultOnClose'
 import defaultOnOpen from './defaultOnOpen'
-import getModalRootElement from './getModalRootElement'
+import getModalRootElementOriginal from './getModalRootElement'
 
 function ModalProvider ({
   children,
   modalRoot,
+  content,
   ContentWrapper = DefaultContentWrapper,
+  getModalRootElement = getModalRootElementOriginal,
   ModalComponent = DefaultModalComponent,
   ModalContainer = DefaultModalContainer,
   onClose = defaultOnClose,
@@ -21,7 +23,7 @@ function ModalProvider ({
   const modalRootElement = getModalRootElement(modalRoot)
 
   return (
-    <ModalController ModalComponent={ModalComponent}>
+    <ModalController ModalComponent={ModalComponent} ContentComponent={content}>
       {({ ContentComponent, openModal, closeModal }) => {
         if (!ContentComponent) {
           return (
@@ -54,7 +56,9 @@ function ModalProvider ({
 /* eslint-disable react/no-unused-prop-types */
 ModalProvider.propTypes = {
   children: PropTypes.func.isRequired,
+  content: PropTypes.oneOfType([PropTypes.element, PropTypes.string, PropTypes.func]),
   ContentWrapper: PropTypes.oneOfType([PropTypes.element, PropTypes.string, PropTypes.func]),
+  getModalRootElement: PropTypes.func,
   ModalComponent: PropTypes.oneOfType([PropTypes.element, PropTypes.string, PropTypes.func]),
   ModalContainer: PropTypes.oneOfType([PropTypes.element, PropTypes.string, PropTypes.func]),
   modalRoot: PropTypes.oneOfType([PropTypes.instanceOf(HTMLElement), PropTypes.string]),
