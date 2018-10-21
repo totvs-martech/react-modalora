@@ -1,17 +1,21 @@
-function getModalRootElement (input, { document: { body }, HTMLElement } = window) {
+function getModalRootElement (input, { document, HTMLElement } = window) {
   if (input instanceof HTMLElement) {
     return input
   }
 
   if (typeof input === 'string') {
-    let modalRoot = body.querySelector(input)
+    let modalRoot = document.body.querySelector(input)
 
     if (!modalRoot) {
-      modalRoot = body.getElementById(input)
+      modalRoot = document.getElementById(input)
+    }
+
+    if (modalRoot) {
+      return modalRoot
     }
   }
 
-  return body
+  return document.body
 }
 
 export default getModalRootElement
