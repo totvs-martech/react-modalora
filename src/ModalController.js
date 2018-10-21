@@ -11,10 +11,14 @@ class ModalController extends PureComponent {
   constructor (props) {
     super(props)
 
-    const { ContentComponent } = props
+    const { ContentComponent, ModalComponent } = props
 
     this.state = {
-      ContentComponent
+      ContentComponent: !ContentComponent ? null : () => (
+        <ModalComponent>
+          <ContentComponent />
+        </ModalComponent>
+      )
     }
   }
 

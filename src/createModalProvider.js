@@ -1,7 +1,8 @@
 import React from 'react'
-import ModalProvider from './ModalProvider'
+import ModalProviderOriginal from './ModalProvider'
 
-const createModalProvider = opts => ({ children, ...props }) =>
-  <ModalProvider {...opts} {...props}>{children}</ModalProvider>
+const createModalProvider = ({ ModalProvider = ModalProviderOriginal, ...opts } = {}) =>
+  ({ children, ...props }) =>
+    <ModalProvider {...opts} {...props}>{children}</ModalProvider>
 
 export default createModalProvider
