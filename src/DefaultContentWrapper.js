@@ -1,7 +1,6 @@
-import React from 'react'
 import PropTypes from 'prop-types'
 
-const DefaultContentWrapper = ({ children }) => <div>{ children }</div>
+const DefaultContentWrapper = ({ children }) => children
 
 DefaultContentWrapper.propTypes = {
   children: PropTypes.node
