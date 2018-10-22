@@ -3,9 +3,7 @@
 exports[`ModalProvider basic usage should match snapshot 1`] = `
 
 <div>
-  <div>
-    Modal content
-  </div>
+  Modal content
 </div>
 
 `;
@@ -13,9 +11,7 @@ exports[`ModalProvider basic usage should match snapshot 1`] = `
 exports[`ModalProvider calling closeModal should render snapshots: after closeModal 1`] = `
 
 <div>
-  <div>
-    Modal content
-  </div>
+  Modal content
 </div>
 
 `;
@@ -23,9 +19,7 @@ exports[`ModalProvider calling closeModal should render snapshots: after closeMo
 exports[`ModalProvider calling closeModal should render snapshots: before closeModal 1`] = `
 
 <div>
-  <div>
-    Modal content
-  </div>
+  Modal content
 </div>
 <div>
   <div style="align-items: flex-start; bottom: 0px; display: flex; justify-content: center; left: 0px; max-height: 100vh; max-width: 100vw; overflow: auto; position: fixed; right: 0px; top: 0px;">
@@ -44,9 +38,7 @@ exports[`ModalProvider calling closeModal should render snapshots: before closeM
 exports[`ModalProvider calling openModal should render snapshots: after openModal 1`] = `
 
 <div>
-  <div>
-    Modal content
-  </div>
+  Modal content
 </div>
 <div>
   <div style="align-items: flex-start; bottom: 0px; display: flex; justify-content: center; left: 0px; max-height: 100vh; max-width: 100vw; overflow: auto; position: fixed; right: 0px; top: 0px;">
@@ -65,9 +57,7 @@ exports[`ModalProvider calling openModal should render snapshots: after openModa
 exports[`ModalProvider calling openModal should render snapshots: before openModal 1`] = `
 
 <div>
-  <div>
-    Modal content
-  </div>
+  Modal content
 </div>
 
 `;
@@ -106,9 +96,7 @@ exports[`ModalProvider passing custom ContentWrapper should match snapshots: wit
 exports[`ModalProvider passing custom ModalComponent should match snapshot 1`] = `
 
 <div>
-  <div>
-    Modal content
-  </div>
+  Modal content
 </div>
 <div>
   <div style="align-items: flex-start; bottom: 0px; display: flex; justify-content: center; left: 0px; max-height: 100vh; max-width: 100vw; overflow: auto; position: fixed; right: 0px; top: 0px;">
@@ -125,9 +113,7 @@ exports[`ModalProvider passing custom ModalComponent should match snapshot 1`] =
 exports[`ModalProvider passing custom ModalContainer should match snapshot 1`] = `
 
 <div>
-  <div>
-    Modal content
-  </div>
+  Modal content
 </div>
 <div>
   <div data-testid="modal-container">
@@ -144,9 +130,7 @@ exports[`ModalProvider passing custom ModalContainer should match snapshot 1`] =
 exports[`ModalProvider providing content should render snapshot 1`] = `
 
 <div>
-  <div>
-    Modal content
-  </div>
+  Modal content
 </div>
 <div>
   <div style="align-items: flex-start; bottom: 0px; display: flex; justify-content: center; left: 0px; max-height: 100vh; max-width: 100vw; overflow: auto; position: fixed; right: 0px; top: 0px;">
