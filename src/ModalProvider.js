@@ -67,4 +67,10 @@ ModalProvider.propTypes = {
 }
 /* eslint-enable */
 
+export const ContentWrapper = DefaultContentWrapper
+export const ModalComponent = DefaultModalComponent
+export const ModalContainer = DefaultModalContainer
+export const onClose = defaultOnClose
+export const onOpen = defaultOnOpen
+
 export default ModalProvider
