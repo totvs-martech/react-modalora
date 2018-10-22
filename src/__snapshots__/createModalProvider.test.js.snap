@@ -3,9 +3,7 @@
 exports[`createModalProvider should create an ModalProvider and match snapshot 1`] = `
 
 <div>
-  <div>
-    foo
-  </div>
+  foo
 </div>
 
 `;
@@ -13,9 +11,7 @@ exports[`createModalProvider should create an ModalProvider and match snapshot 1
 exports[`createModalProvider should pass custom props 1`] = `
 
 <div>
-  <div>
-    foo
-  </div>
+  foo
 </div>
 <div>
   <div style="align-items: flex-start; bottom: 0px; display: flex; justify-content: center; left: 0px; max-height: 100vh; max-width: 100vw; overflow: auto; position: fixed; right: 0px; top: 0px;">
