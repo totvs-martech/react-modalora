@@ -13,6 +13,7 @@ function ModalProvider ({
   children,
   modalRoot,
   content,
+  closeOnOverlayClick,
   ContentWrapper = DefaultContentWrapper,
   getModalRootElement = getModalRootElementOriginal,
   ModalComponent = DefaultModalComponent,
@@ -21,7 +22,6 @@ function ModalProvider ({
   onOpen = defaultOnOpen
 } = {}) {
   const modalRootElement = getModalRootElement(modalRoot)
-
   return (
     <ModalController ModalComponent={ModalComponent} ContentComponent={content}>
       {({ ContentComponent, openModal, closeModal }) => {
@@ -42,7 +42,7 @@ function ModalProvider ({
             </ContentWrapper>
 
             <ModalPortal modalRoot={modalRootElement} onOpen={onOpen} onClose={onClose}>
-              <ModalContainer>
+              <ModalContainer closeOnOverlayClick={closeOnOverlayClick} closeModal={closeModal}>
                 <ContentComponent />
               </ModalContainer>
             </ModalPortal>

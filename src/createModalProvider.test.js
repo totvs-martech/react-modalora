@@ -17,4 +17,14 @@ describe('createModalProvider', function () {
     render(<ModalProvider>{() => 'foo'}</ModalProvider>)
     expect(document.body.innerHTML).toMatchSnapshot()
   })
+
+  it('should be able to optionaly close the modal on overlay click', function () {
+    const content = () => 'bar'
+    const ModalProvider = createModalProvider({
+      content,
+      closeOnOverlayClick: true
+    })
+    render(<ModalProvider>{() => 'foo'}</ModalProvider>)
+    expect(document.body.innerHTML).toMatchSnapshot()
+  })
 })
