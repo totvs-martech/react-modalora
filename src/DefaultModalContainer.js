@@ -8,11 +8,15 @@ const overlayStyle = {
   position: 'fixed',
   right: 0,
   top: 0,
-  transform: 'translate3d(0px, -1px, 0px)'
+  transform: 'translate3d(0px, -1px, 0px)',
+  width: '100%',
+  padding: 0,
+  margin: 0,
+  border: 0
 }
 
 const Overlay = ({ closeOnOverlayClick, closeModal }) => (
-  <div
+  <button
     style={overlayStyle}
     onClick={() => closeOnOverlayClick && closeModal()}
   />
