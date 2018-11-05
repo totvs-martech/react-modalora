@@ -15,12 +15,9 @@ const overlayStyle = {
   border: 0
 }
 
-const Overlay = ({ closeOnOverlayClick, closeModal }) => (
-  <button
-    style={overlayStyle}
-    onClick={() => closeOnOverlayClick && closeModal()}
-  />
-)
+const Overlay = ({ closeOnOverlayClick, closeModal }) => closeOnOverlayClick
+  ? <button style={overlayStyle} onClick={() => closeModal()} />
+  : <div style={overlayStyle} />
 
 Overlay.propTypes = {
   closeOnOverlayClick: PropTypes.bool,
