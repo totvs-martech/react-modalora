@@ -11,7 +11,8 @@ module.exports = {
   "env": {
     "production": {
       "plugins": [
-        ["transform-react-remove-prop-types", { "mode": "remove" }]
+        ["transform-react-remove-prop-types", { "mode": "remove" }],
+        ["jsx-remove-data-test-id", { "attributes": ["data-testid"] }]
       ]
     }
   }

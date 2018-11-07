@@ -8,10 +8,21 @@ const overlayStyle = {
   position: 'fixed',
   right: 0,
   top: 0,
-  transform: 'translate3d(0px, -1px, 0px)'
+  transform: 'translate3d(0px, -1px, 0px)',
+  width: '100%',
+  padding: 0,
+  margin: 0,
+  border: 0
 }
 
-const Overlay = () => <div style={overlayStyle} />
+const Overlay = ({ closeOnOverlayClick, closeModal }) => closeOnOverlayClick
+  ? <button style={overlayStyle} onClick={() => closeModal()} data-testid='overlay' />
+  : <div style={overlayStyle} />
+
+Overlay.propTypes = {
+  closeOnOverlayClick: PropTypes.bool,
+  closeModal: PropTypes.func
+}
 
 const containerStyle = {
   alignItems: 'flex-start',
@@ -27,9 +38,9 @@ const containerStyle = {
   top: 0
 }
 
-const DefaultModalContainer = ({ children }) => (
+const DefaultModalContainer = ({ children, closeOnOverlayClick, closeModal }) => (
   <div style={containerStyle}>
-    <Overlay />
+    <Overlay closeOnOverlayClick={closeOnOverlayClick} closeModal={closeModal} />
     {children}
   </div>
 )
@@ -37,7 +48,9 @@ const DefaultModalContainer = ({ children }) => (
 DefaultModalContainer.displayName = 'DefaultModalContainer'
 
 DefaultModalContainer.propTypes = {
-  children: PropTypes.node
+  children: PropTypes.node,
+  closeModal: PropTypes.func,
+  closeOnOverlayClick: PropTypes.bool
 }
 
 export default DefaultModalContainer
