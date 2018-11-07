@@ -16,7 +16,7 @@ const overlayStyle = {
 }
 
 const Overlay = ({ closeOnOverlayClick, closeModal }) => closeOnOverlayClick
-  ? <button style={overlayStyle} onClick={() => closeModal()} />
+  ? <button style={overlayStyle} onClick={() => closeModal()} data-testid='overlay' />
   : <div style={overlayStyle} />
 
 Overlay.propTypes = {
