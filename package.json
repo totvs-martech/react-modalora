@@ -2,7 +2,7 @@
   "name": "react-modalora",
   "version": "1.1.0",
   "private": true,
-  "description": "Modal for React 16+",
+  "description": "Another highly customizable logic component for modals using React Portal",
   "license": "MIT",
   "repository": {
     "type": "git",
