@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from 'react'
-import { render } from 'react-testing-library'
+import { fireEvent, render } from 'react-testing-library'
 import ModalProvider from './ModalProvider'
 
 describe('ModalProvider', function () {
@@ -135,6 +135,28 @@ describe('ModalProvider', function () {
 
       closeModalRef()
       expect(document.body.style.overflow).not.toBe('hidden')
+    })
+  })
+
+  describe('passing closeOnOverlayClick=true', function () {
+    it('should render snapshots', function () {
+      const MockContent = () => <>content</>
+
+      const { getByTestId } = render(
+        <ModalProvider closeOnOverlayClick content={MockContent}>
+          {() => (
+            <>
+              Modal content
+            </>
+          )}
+        </ModalProvider>
+      )
+
+      expect(document.body.innerHTML).toMatchSnapshot('before click overlay')
+
+      fireEvent.click(getByTestId('overlay'))
+
+      expect(document.body.innerHTML).toMatchSnapshot('after click overlay')
     })
   })
 

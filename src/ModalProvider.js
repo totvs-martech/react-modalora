@@ -13,14 +13,14 @@ function ModalProvider ({
   children,
   modalRoot,
   content,
-  closeOnOverlayClick,
+  closeOnOverlayClick = false,
   ContentWrapper = DefaultContentWrapper,
   getModalRootElement = getModalRootElementOriginal,
   ModalComponent = DefaultModalComponent,
   ModalContainer = DefaultModalContainer,
   onClose = defaultOnClose,
   onOpen = defaultOnOpen
-} = {}) {
+}) {
   const modalRootElement = getModalRootElement(modalRoot)
   return (
     <ModalController ModalComponent={ModalComponent} ContentComponent={content}>
@@ -56,6 +56,7 @@ function ModalProvider ({
 /* eslint-disable react/no-unused-prop-types */
 ModalProvider.propTypes = {
   children: PropTypes.func.isRequired,
+  closeOnOverlayClick: PropTypes.bool,
   content: PropTypes.oneOfType([PropTypes.element, PropTypes.string, PropTypes.func]),
   ContentWrapper: PropTypes.oneOfType([PropTypes.element, PropTypes.string, PropTypes.func]),
   getModalRootElement: PropTypes.func,
