@@ -1,3 +1,9 @@
+#### 1.1.1 (2018-11-16)
+
+##### Bug Fixes
+
+*  problems using MS Edge ([f4f5843a](https://github.com/totvs-store/react-modalora/commit/f4f5843ae0b5eda5a34f6f6f773222bc31400f5f))
+
 ## 1.1.0 (2018-11-07)
 
 ##### New Features
