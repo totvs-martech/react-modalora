@@ -1,0 +1,11 @@
+language: node_js
+node_js:
+  - stable
+  - "lts/*"
+install:
+  - npm install --ignore-scripts
+  - npm install react@16.2.0 react-dom@16.2.1
+script:
+  - npm audit
+  - npm lint
+  - npm test
