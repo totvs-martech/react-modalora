@@ -7,7 +7,7 @@
 It uses `render prop` to expose some functions and `React Portal` to allocate
 modal markup.
 
-Also needs `react` (16+) & `react-dom` installed on project.
+Also needs `react@^16.2.0` & `react-dom@^16.2.1` installed on project because it uses `React.Portal` (v16.0) and `React.Fragment` (v16.2).
 
 ## Instalation
 

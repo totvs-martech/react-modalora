@@ -1,3 +1,9 @@
+#### 1.1.2 (2018-11-16)
+
+##### Chores
+
+*  improved scripts & added travis ([866a9a72](https://github.com/totvs-store/react-modalora/commit/866a9a72555a3efe191a2a86aab64a74d7cbd667))
+
 #### 1.1.1 (2018-11-16)
 
 ##### Bug Fixes
