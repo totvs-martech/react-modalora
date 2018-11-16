@@ -10,17 +10,12 @@ const BASE_PATH = process.cwd()
 const PACKAGE_FILE = 'package.json'
 const TARGET_PATH = 'dist'
 
-const REACT_PEERDEP_VERSION = '^16.0.0'
-
 function updateJson (input) {
   const { dependencies, devDependencies, private: priv, scripts, husky, ...rest } = input
 
   return {
     ...rest,
-    peerDependencies: {
-      react: REACT_PEERDEP_VERSION,
-      'react-dom': REACT_PEERDEP_VERSION
-    }
+    peerDependencies: dependencies
   }
 }
 
