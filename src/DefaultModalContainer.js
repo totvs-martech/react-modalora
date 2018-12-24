@@ -12,7 +12,8 @@ const overlayStyle = {
   width: '100%',
   padding: 0,
   margin: 0,
-  border: 0
+  border: 0,
+  zIndex: 2
 }
 
 const Overlay = ({ closeOnOverlayClick, closeModal }) => closeOnOverlayClick
