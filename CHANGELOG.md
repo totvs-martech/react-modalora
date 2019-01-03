@@ -1,3 +1,9 @@
+#### 1.1.5 (2019-01-03)
+
+##### Refactors
+
+*  fixed lint error ([0e08732f](https://github.com/totvs-store/react-modalora/commit/0e08732f1bfd42aee21ff2550dfe9659494aee7e))
+
 #### 1.1.4 (2019-01-03)
 
 ##### Bug Fixes
