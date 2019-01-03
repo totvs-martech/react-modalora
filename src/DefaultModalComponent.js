@@ -6,8 +6,7 @@ const defaultModalComponentStyle = {
   margin: '3rem auto',
   maxWidth: '100vw',
   padding: '1.5rem',
-  transform: 'translate3d(0px, 1px, 0px)',
-  width: '80rem'
+  transform: 'translate3d(0px, 1px, 0px)'
 }
 
 const DefaultModalComponent = ({ children }) =>
