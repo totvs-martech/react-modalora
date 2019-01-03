@@ -1,3 +1,19 @@
+#### 1.1.5 (2019-01-03)
+
+##### Refactors
+
+*  fixed lint error ([0e08732f](https://github.com/totvs-store/react-modalora/commit/0e08732f1bfd42aee21ff2550dfe9659494aee7e))
+
+#### 1.1.4 (2019-01-03)
+
+##### Bug Fixes
+
+*  set a default zindex for overlay (IE problems) ([9dc44437](https://github.com/totvs-store/react-modalora/commit/9dc444378a9f2124b29aa2d7bd57dfbde085eb66))
+
+##### Tests
+
+*  updating snapshots ([64c39d78](https://github.com/totvs-store/react-modalora/commit/64c39d7825595153497703e93afb5e32da37e864))
+
 #### 1.1.3 (2018-11-16)
 
 ##### Chores
