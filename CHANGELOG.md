@@ -1,3 +1,13 @@
+#### 1.1.4 (2019-01-03)
+
+##### Bug Fixes
+
+*  set a default zindex for overlay (IE problems) ([9dc44437](https://github.com/totvs-store/react-modalora/commit/9dc444378a9f2124b29aa2d7bd57dfbde085eb66))
+
+##### Tests
+
+*  updating snapshots ([64c39d78](https://github.com/totvs-store/react-modalora/commit/64c39d7825595153497703e93afb5e32da37e864))
+
 #### 1.1.3 (2018-11-16)
 
 ##### Chores
