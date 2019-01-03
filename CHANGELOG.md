@@ -1,3 +1,17 @@
+#### 1.1.6 (2019-01-03)
+
+##### Chores
+
+*  updated package-lock.json ([427278e8](https://github.com/totvs-store/react-modalora/commit/427278e8de519c4507b4caa228effb21940abb20))
+
+##### Bug Fixes
+
+*  fixing z-index and width on container ([c576287e](https://github.com/totvs-store/react-modalora/commit/c576287e698b54f57960005f1d50d0feb10a7978))
+
+##### Tests
+
+*  updating snapshots ([6c6fe63a](https://github.com/totvs-store/react-modalora/commit/6c6fe63aeb0474e20394be25d0760bc9bc8d2e94))
+
 #### 1.1.5 (2019-01-03)
 
 ##### Refactors
